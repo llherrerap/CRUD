@@ -1,2 +1,41 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<header>
+    <h1>CRUD</h1>
+</header>
+<main>
+    <h2>Listado personas</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha de nacimiento</th>
+                <th>Correo</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Se agrega el contenido dinamicamente por medio de JS -->
+            {{#each resultado}}
+            <tr>
+                <form action="/actualizar/{{id}}" method="post">
+                    <td><input type="text" name="nombre" id="nombre" value="{{nombre}}" {{../opcion}}></td>
+                    <td><input type="text" name="apellido" id="apellido" value="{{apellido}}" {{../opcion}}></td>
+                    <td><input type="date" name="fecha_nacimiento" id="fecha_nacimiento" value="{{formatoFecha fecha_nacimiento}}" {{../opcion}}></td>
+                    <td><input type="email" name="correo" id="correo" value="{{correo}}" {{../opcion}}></td>
+                    <td>
+                        {{#if ../estado}}
+                            <a class="editar" href="/activar">Actualizar</a>
+                            <a class="eliminar" href="/eliminar/{{id}}">Eliminar</a>
+                        {{else}}
+                            <input type="submit" value="Enviar">
+                        {{/if}}
+                    </td>
+                </form>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    <div class=".opciones-tabla">
+        <a href="/registro-persona.html">Registrar persona</a>
+    </div>
+</main>

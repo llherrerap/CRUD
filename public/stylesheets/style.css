@@ -1,8 +1,93 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
 }
 
-a {
-  color: #00B7FF;
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+input {
+  border: 0;
+}
+
+img{
+  width: 15px;
+}
+
+a, input[type="submit"] {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  border: none;
+  font-size: medium;
+  border-radius: 4px;
+}
+
+a:hover, input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.volver, .editar{
+  background-color: #4cacaf;
+}
+
+.eliminar {
+  background-color: #ff0000;
+}
+
+.volver,.editar:hover {
+  background-color: #429396;
+}
+
+.eliminar:hover {
+  background-color: #9a0000;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.opciones-tabla{
+  display: flex;
+  justify-content: center;
+}
+
+.opciones-tabla a{
+  width: 150px;
+    text-align: center;
+    margin: 10px;
 }
